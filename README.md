@@ -28,7 +28,7 @@ Every branch критериумот ги вклучува сите гранки 
 5. user=[Ana,Si123@finKI,ana.gashtarova@yahoo.com], allUsers=user
 6. user=[Ana,Si@finKIlab,ana.gashtarova@yahoo.com], allUsers=user
 
-![cfg](every_branch_tabela.jpg)
+![cfg](every_branch_tabela_csv.jpg)
 
 
 **Тест случаи според критериумот Every path**

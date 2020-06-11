@@ -1,0 +1,30 @@
+1 public boolean function (User user, List<String> allUsers) {
+2        String specialCharacters="!#$%&'()*+,-./:;<=>?@[]^_`{|}";
+3        if (user==null) {
+4            throw new RuntimeException("The user is not instantiated");
+        }
+5        if (user.getUsername()==null || user.getPassword()==null)
+6            throw new RuntimeException("The user is missing some mandatory information");
+7        String password = user.getPassword();
+8        String passwordLower = password.toLowerCase();
+9        if (passwordLower.contains(user.getUsername().toLowerCase())) {
+10            return false;
+        }
+11        else if (passwordLower.length()<8)
+            return false;
+          else {
+12            boolean digit = false, upper = false, special = false;
+
+13.1, 13.2, 13.3     for (int i=0;i<password.length();i++) {
+14                if (Character.isDigit(password.charAt(i)))
+15                    digit = true;
+16                if (Character.isUpperCase(password.charAt(i)))
+17                    upper = true;
+18                if (specialCharacters.contains(String.valueOf(password.charAt(i))))
+19                    special = true;
+            }
+20            if (!digit || !upper || !special)
+                return false;
+        }
+21        return true;
+22    }
